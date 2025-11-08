@@ -13,6 +13,12 @@ The first time you select a specific executable, it has to generate a list of th
 Instruction lists are named after the executable itself and stored in the same folder. They're formatted like this:
 
 ```
+{offset} {length} {instruction name}
+```
+
+Here's a small example:
+
+```
 0x00000600 0x01 push 
 0x00000601 0x04 sub 
 0x00000605 0x05 mov 
