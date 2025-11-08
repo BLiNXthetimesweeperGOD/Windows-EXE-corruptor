@@ -52,6 +52,8 @@ Screenshot of the program itself:
 <img width="635" height="388" alt="image" src="https://github.com/user-attachments/assets/40cd5d29-8ca3-4efc-b2fc-f0438eafd438" />
 
 # Additional info
+If you get a permission error, that's either because the file you're corrupting is in a folder that's read only, the script is in a location that's read only and it can't generate backups, or the file you're trying to corrupt is open and a program needs to be closed.
+
 This is highly unlikely to work on Unity games unless they use IL2CPP.
 
 Games are still highly likely to crash when corrupting them with this. Keep lowering the intensity until you start getting stable results.
