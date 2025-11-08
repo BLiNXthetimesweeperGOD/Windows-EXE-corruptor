@@ -48,3 +48,12 @@ Here's a small example:
 Screenshot of the program itself:
 
 <img width="635" height="388" alt="image" src="https://github.com/user-attachments/assets/40cd5d29-8ca3-4efc-b2fc-f0438eafd438" />
+
+# Additional info
+This is highly unlikely to work on Unity games unless they use IL2CPP.
+
+Games are still highly likely to crash when corrupting them with this. Keep lowering the intensity until you start getting stable results.
+
+16-Bit games aren't supported... Yet. I might add support for them at some point in the future, but don't expect them to work any time soon.
+
+The default targets (the instructions we replace) are all floating point-related and very unlikely to damage your system. Only change them if you know what you're doing!
