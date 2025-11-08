@@ -102,9 +102,7 @@ def scanForOpcodes(data, virtualAddress, fileOffset, imageBase, bits):
     
     return offsets
 
-def instructionListGenerator(file):
-    instructionListFile = file.replace("exe", "txt")
-
+def instructionListGenerator(file, instructionListFile):
     #First, get the main code section data
     result = getCodeSection(file)
     if result:

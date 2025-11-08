@@ -41,12 +41,18 @@ def backupFile(file, offset, rootDirectory, tag="_BACKUP", extension=".bin"):
         stream.seek(offset)
         fileData = stream.read(0x140)
         fileHash = genHash(fileData)
-        backupPath = rootDirectory + fileHash + tag + extension
+        backupPath = rootDirectory
 
+        if not os.path.exists(backupPath):
+            os.makedirs(backupPath)
+            
+        backupPath += fileHash + tag + extension
+        
         if os.path.exists(backupPath):
             stream.seek(offset)
             stream.write(getFileContents(backupPath))
         else:
+            
             with open(backupPath, "w+b") as backup:
                 stream.seek(offset)
                 backup.write(stream.read())

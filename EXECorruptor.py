@@ -4,6 +4,10 @@ from libraries.simpleGUI import *
 from libraries.generateInstructionList import *
 import random
 
+#Set the current working directory (because Python defaults to System32)
+scriptPath = os.path.dirname(os.path.abspath(__file__))
+os.chdir(scriptPath)
+
 #Feel free to customize this. Be careful! Some instructions are be more dangerous than others.
 targets = ["fmul", "fsub", "fadd", "fdiv", "fld", "fst", "fstp", "fsqrt",
            "addps", "mulps", "subps", "divps", "sqrtps"]
@@ -16,10 +20,13 @@ def openFile():
     global instructions
     file = dialog("file").paths
     if file:
-        instructionList = file.replace("exe", "txt")
+        if ".exe" in file:
+            instructionList = file.replace(".exe", ".txt")
+        elif ".dll" in file:
+            instructionList = file.replace(".dll", ".txt")
         
         if not os.path.exists(instructionList): #Generate an instruction list
-            instructionListGenerator(file)
+            instructionListGenerator(file, instructionList)
             
         instructions = []
 
