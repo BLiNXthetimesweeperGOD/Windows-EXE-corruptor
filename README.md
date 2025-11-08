@@ -19,7 +19,7 @@ This is the most important warning.
 If a game or program has online functionality (such as error reporting, leaderboards, collection of user info), be sure to block it from accessing the internet in the Windows firewall.
 
 # Setup
-You'll need to run the following in CMD to use this:
+You'll need to run the following in CMD to use this (be sure to enable the PATH option while installing Python!):
 
 ```
 pip install iced_x86
