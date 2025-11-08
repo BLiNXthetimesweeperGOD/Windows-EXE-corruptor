@@ -1,5 +1,5 @@
 # Windows-EXE-corruptor
-This is an easy to use Windows executable corruptor that randomly replaces specific instructions with NOP
+This is an easy to use Windows executable+dll corruptor that randomly replaces specific instructions with NOP
 
 This was written with Python 3.14.0
 
