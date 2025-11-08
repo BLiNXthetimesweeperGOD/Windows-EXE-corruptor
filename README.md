@@ -1,6 +1,8 @@
 # Windows-EXE-corruptor
 This is an easy to use Windows executable corruptor that randomly replaces specific instructions with NOP
 
+This was written with Python 3.14.0
+
 ## Please read these first few sections before proceeding to the later ones.
 
 Back up your game/program's save data and any important files before using this (maybe even use it in a VM for extra safety)
