@@ -1,6 +1,22 @@
 # Windows-EXE-corruptor
 This is an easy to use Windows executable corruptor that randomly replaces specific instructions with NOP
 
+## Please read these first few sections before proceeding to the later ones.
+
+Back up your game/program's save data and any important files before using this (maybe even use it in a VM for extra safety)
+
+# DO NOT USE THIS ON ONLINE GAME EXECUTABLES! 
+This is the most important warning. 
+
+- You could send garbage data to the servers
+- You could damage someone else's hardware depending on what the corruptor hits
+- You could get yourself banned
+- You could get others banned
+- You could set a bad example and get either you or me into legal trouble if others copy you
+
+If a game or program has online functionality (such as error reporting, leaderboards, collection of user info), be sure to block it from accessing the internet in the Windows firewall.
+
+# Setup
 You'll need to run the following in CMD to use this:
 
 ```
