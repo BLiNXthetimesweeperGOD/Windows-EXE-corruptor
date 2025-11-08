@@ -20,17 +20,17 @@ def openFile():
     global instructions
     file = dialog("file").paths
     if file:
-        if ".exe" in file:
-            instructionList = file.replace(".exe", ".txt")
-        elif ".dll" in file:
-            instructionList = file.replace(".dll", ".txt")
+        if ".exe" in file.lower():
+            instructionList = file.lower().replace(".exe", ".txt")
+        elif ".dll" in file.lower():
+            instructionList = file.lower().replace(".dll", ".txt")
         
-        if not os.path.exists(instructionList): #Generate an instruction list
-            instructionListGenerator(file, instructionList)
+        if not os.path.exists(instructionList.lower()): #Generate an instruction list
+            instructionListGenerator(file, instructionList.lower())
             
         instructions = []
 
-        with open(instructionList, "r") as listLoader:
+        with open(instructionList.lower(), "r") as listLoader:
             lines = listLoader.readlines()
             for line in lines:
                 entry = line.split()
